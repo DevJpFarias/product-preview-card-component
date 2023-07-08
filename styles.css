@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,39 +10,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 
   background-color: #F3EAE3;
 }
 
 p {
+  color: hsl(158, 36%, 37%);
   font-size: 14px;
 }
 
 .container {
+  height: 500px;
+  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 30px 40px;
+  margin: 40px;
 }
 
 .grid-container {
-  height: 500px;
-  width: 650px;
+  height: 100%;
+  width: 100%;
   border-radius: 20px;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
 }
 
 img {
@@ -50,13 +48,73 @@ img {
 }
 
 .content-div {
-  /* border-color: black;
-  border-style: solid;
-  border-width: 1px; */
-
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-evenly;
 
-  padding: 30px;
+  padding: 0px 30px;
+}
+
+.content-div .category {
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+
+.content-div h1 {
+  margin-right: 20px;
+  font-family: 'Fraunces', sans-serif;
+}
+
+.content-div p {
+  line-height: 1.5;
+}
+
+.content-div .description {
+  margin-right: 20px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+}
+
+.price {
+  color: hsl(228, 12%, 48%);
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Fraunces', sans-serif;
+}
+
+.old-price {
+  margin: 10px 20px;
+  text-decoration: line-through;
+}
+
+button {
+  height: 45px;
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 10px;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button p {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+button img {
+  height: 15px;
+  width: 15px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
